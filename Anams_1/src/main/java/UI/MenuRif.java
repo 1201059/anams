@@ -1,8 +1,3 @@
-/*
- * To change this license header, choose License Headers in Project Properties.
- * To change this template file, choose Tools | Templates
- * and open the template in the editor.
- */
 package UI;
 
 import Model.GESTFEST;
@@ -11,19 +6,18 @@ import java.io.IOException;
 
 /**
  *
- * @author 35191
+ * @author grupo9
  */
-public class MenuRif {
 
+public class MenuRIF {
     private GESTFEST gestfest;
     private String opcao;
 
-    public MenuRif(GESTFEST gestfest) {
+    public MenuRIF(GESTFEST gestfest) {
         this.gestfest = gestfest;
     }
 
     public void run() throws IOException {
-
         do {
             System.out.println("Menu RIF");
             System.out.println("1.Registo do Festival");
@@ -36,8 +30,7 @@ public class MenuRif {
             if (opcao.equals("1")) {
                 UC05_RegistoFestivalUI ui = new UC05_RegistoFestivalUI(gestfest);
                 ui.run();
-            }
-            if (opcao.equals("2")) {
+            }else if (opcao.equals("2")) {
                 UC06_AssociarEntidadeFestivalUI ui = new UC06_AssociarEntidadeFestivalUI(gestfest);
                 ui.run();
             } else if (opcao.equals("3")) {
@@ -48,6 +41,5 @@ public class MenuRif {
                 ui.run();
             }
         } while (!opcao.equals("0"));
-
     }
 }

@@ -13,12 +13,12 @@ import java.io.IOException;
  *
  * @author 35191
  */
-public class MenuRpf {
+public class MenuRPF {
 
     private GESTFEST gestfest;
     private String opcao;
 
-    public MenuRpf(GESTFEST gestfest) {
+    public MenuRPF(GESTFEST gestfest) {
         this.gestfest = gestfest;
     }
 

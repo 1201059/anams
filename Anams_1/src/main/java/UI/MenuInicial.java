@@ -32,13 +32,13 @@ public class MenuInicial {
 
             opcao = Utils.readLineFromConsole("Introduza a opção");
             if (opcao.equals("1")) {
-                MenuApg ui = new MenuApg(gestfest);
+                MenuAPG ui = new MenuAPG(gestfest);
                 ui.run();
             } else if (opcao.equals("2")) {
-                MenuRif ui = new MenuRif(gestfest);
+                MenuRIF ui = new MenuRIF(gestfest);
                 ui.run();
             } else if (opcao.equals("3")) {
-                MenuRpf ui = new MenuRpf(gestfest);
+                MenuRPF ui = new MenuRPF(gestfest);
                 ui.run();
             }
         } while (!opcao.equals("0"));

@@ -1,8 +1,3 @@
-/*
- * To change this license header, choose License Headers in Project Properties.
- * To change this template file, choose Tools | Templates
- * and open the template in the editor.
- */
 package UI;
 
 import Model.GESTFEST;
@@ -11,19 +6,18 @@ import java.io.IOException;
 
 /**
  *
- * @author 35191
+ * @author grupo9
  */
-public class MenuApg {
 
+public class MenuAPG {
     private GESTFEST gestfest;
     private String opcao;
 
-    public MenuApg(GESTFEST gestfest) {
+    public MenuAPG(GESTFEST gestfest) {
         this.gestfest = gestfest;
     }
 
     public void run() throws IOException {
-
         do {
             System.out.println("Menu Administrador");
             System.out.println("1.Especificar tipo de entidades");
@@ -36,17 +30,16 @@ public class MenuApg {
             if (opcao.equals("1")) {
                 UC01_EspecificarTipoEntidadesUI ui = new UC01_EspecificarTipoEntidadesUI(gestfest);
                 ui.run();
-            } else if (opcao.equals("2")) {
+            }else if (opcao.equals("2")) {
                 UC02_RegistarEntidadesUI ui = new UC02_RegistarEntidadesUI(gestfest);
                 ui.run();
-            } else if (opcao.equals("3")) {
+            }else if (opcao.equals("3")) {
                 UC03_EspecificarBilhetesUI ui = new UC03_EspecificarBilhetesUI(gestfest);
                 ui.run();
-            } else if (opcao.equals("4")) {
+            }else if (opcao.equals("4")) {
                 UC04_ConsultarInformacaoUI ui = new UC04_ConsultarInformacaoUI(gestfest);
                 ui.run();
-            }
-            
+            }           
         }while (!opcao.equals("0"));
     }
 }
