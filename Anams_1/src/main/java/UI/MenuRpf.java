@@ -34,16 +34,16 @@ public class MenuRpf {
 
             opcao = Utils.readLineFromConsole("Introduza a opção");
             if (opcao.equals("1")) {
-                UC07_ConvidarArtistaParaFestivalUi ui = new UC07_ConvidarArtistaParaFestivalUi(gestfest);
+                UC07_ConvidarArtistaParaFestivalUI ui = new UC07_ConvidarArtistaParaFestivalUI(gestfest);
                 ui.run();
             } else if (opcao.equals("2")) {
-                UC08_AlterarEstadoConviteUi ui = new UC08_AlterarEstadoConviteUi(gestfest);
+                UC08_AlterarEstadoConviteUI ui = new UC08_AlterarEstadoConviteUI(gestfest);
                 ui.run();
             } else if (opcao.equals("3")) {
-                UC09_DefinirProgramacaoFestivalUi ui = new UC09_DefinirProgramacaoFestivalUi(gestfest);
+                UC09_DefinirProgramacaoFestivalUI ui = new UC09_DefinirProgramacaoFestivalUI(gestfest);
                 ui.run();
             } else if (opcao.equals("4")) {
-                UC10_ConsultarProgramacaoFestivalUi ui = new UC10_ConsultarProgramacaoFestivalUi(gestfest);
+                UC10_ConsultarProgramacaoFestivalUI ui = new UC10_ConsultarProgramacaoFestivalUI(gestfest);
                 ui.run();
             }
 

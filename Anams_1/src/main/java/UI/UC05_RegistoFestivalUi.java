@@ -16,12 +16,12 @@ import java.util.HashSet;
  *
  * @author 35191
  */
-public class UC05_RegistoFestivalUi {
+public class UC05_RegistoFestivalUI {
 
     private GESTFEST gestfest;
     private UC05_RegistoFestivalController controller;
 
-    public UC05_RegistoFestivalUi(GESTFEST gestfest) {
+    public UC05_RegistoFestivalUI(GESTFEST gestfest) {
         this.gestfest = gestfest;
         this.controller = new UC05_RegistoFestivalController(gestfest);
     }

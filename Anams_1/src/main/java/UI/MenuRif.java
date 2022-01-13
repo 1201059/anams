@@ -34,17 +34,17 @@ public class MenuRif {
 
             opcao = Utils.readLineFromConsole("Introduza a opção");
             if (opcao.equals("1")) {
-                UC05_RegistoFestivalUi ui = new UC05_RegistoFestivalUi(gestfest);
+                UC05_RegistoFestivalUI ui = new UC05_RegistoFestivalUI(gestfest);
                 ui.run();
             }
             if (opcao.equals("2")) {
-                UC06_AssociarEntidadeFestivalUi ui = new UC06_AssociarEntidadeFestivalUi(gestfest);
+                UC06_AssociarEntidadeFestivalUI ui = new UC06_AssociarEntidadeFestivalUI(gestfest);
                 ui.run();
             } else if (opcao.equals("3")) {
-                UC04_ConsultarInformacaoUi ui = new UC04_ConsultarInformacaoUi(gestfest);
+                UC04_ConsultarInformacaoUI ui = new UC04_ConsultarInformacaoUI(gestfest);
                 ui.run();
             } else if (opcao.equals("4")) {
-                UC10_ConsultarProgramacaoFestivalUi ui = new UC10_ConsultarProgramacaoFestivalUi(gestfest);
+                UC10_ConsultarProgramacaoFestivalUI ui = new UC10_ConsultarProgramacaoFestivalUI(gestfest);
                 ui.run();
             }
         } while (!opcao.equals("0"));

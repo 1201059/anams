@@ -9,12 +9,12 @@ import Utilitarios.Utils;
  * @author grupo9
  */
 
-public class UC08_AlterarEstadoConviteUi {
+public class UC08_AlterarEstadoConviteUI {
 
     private GESTFEST gestfest;
     private UC08_AlterarEstadoConviteController controller;
 
-    public UC08_AlterarEstadoConviteUi(GESTFEST gestfest) {
+    public UC08_AlterarEstadoConviteUI(GESTFEST gestfest) {
         this.gestfest = gestfest;
         controller = new UC08_AlterarEstadoConviteController(gestfest);
     }
@@ -22,14 +22,14 @@ public class UC08_AlterarEstadoConviteUi {
     public void run() {
         System.out.println("\nAlterar estado do convite:");
         System.out.println("Lista de convites: ");
-        if (controller.getListaConvite().isEmpty()) {
+        if (controller.getListaConvites().isEmpty()) {
             System.out.println("\nNão existem convites para alterar o estado.");
-        } else {
-
-            System.out.println(controller.getListaConvite());
+        }else {
+            System.out.println(controller.getListaConvites());
             introduzDados();
         }
     }
+
     private void introduzDados() {
         int cod = Utils.IntFromConsole("Introduza o código do estado do convite: ");
         if (controller.obterConvite(cod) != null) {
@@ -56,4 +56,3 @@ public class UC08_AlterarEstadoConviteUi {
         System.out.println(controller.obterDados());
     }
 }
-

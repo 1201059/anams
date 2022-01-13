@@ -13,12 +13,12 @@ import Utilitarios.Utils;
  *
  * @author 35191
  */
-public class UC02_RegistarEntidadesUi {
+public class UC02_RegistarEntidadesUI {
 
     private GESTFEST gestfest;
     private UC02_RegistarEntidadesController controller;
 
-    public UC02_RegistarEntidadesUi(GESTFEST gestfest) {
+    public UC02_RegistarEntidadesUI(GESTFEST gestfest) {
         this.gestfest = gestfest;
         this.controller = new UC02_RegistarEntidadesController(gestfest);
     }

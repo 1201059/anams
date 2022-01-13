@@ -1,8 +1,10 @@
 package Controller;
 
+import Model.Convite;
 import Model.GESTFEST;
 import Model.PedidoConvite;
 import Model.PedidoConvite.Estado;
+import java.util.ArrayList;
 
 /**
  *
@@ -15,6 +17,10 @@ public class UC08_AlterarEstadoConviteController {
     
     public UC08_AlterarEstadoConviteController(GESTFEST gestfest) {
         this.gestfest = gestfest;
+    }
+    
+    public ArrayList<Convite> getListaConvites(){
+        return this.gestfest.getListaConvites();
     }
 
     public PedidoConvite obterConvite(int cod) {

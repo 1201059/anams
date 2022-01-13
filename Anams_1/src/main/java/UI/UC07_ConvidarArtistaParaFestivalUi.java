@@ -14,12 +14,12 @@ import java.util.Date;
  *
  * @author 35191
  */
-public class UC07_ConvidarArtistaParaFestivalUi {
+public class UC07_ConvidarArtistaParaFestivalUI {
 
     private GESTFEST gestfest;
     private UC07_ConvidarArtistaParaFestivalController controller;
 
-    public UC07_ConvidarArtistaParaFestivalUi(GESTFEST gestfest) {
+    public UC07_ConvidarArtistaParaFestivalUI(GESTFEST gestfest) {
         this.gestfest = gestfest;
         controller = new UC07_ConvidarArtistaParaFestivalController(gestfest);
     }

@@ -34,16 +34,16 @@ public class MenuApg {
 
             opcao = Utils.readLineFromConsole("Introduza a opção");
             if (opcao.equals("1")) {
-                UC01_EspecificarTipoEntidadesUi ui = new UC01_EspecificarTipoEntidadesUi(gestfest);
+                UC01_EspecificarTipoEntidadesUI ui = new UC01_EspecificarTipoEntidadesUI(gestfest);
                 ui.run();
             } else if (opcao.equals("2")) {
-                UC02_RegistarEntidadesUi ui = new UC02_RegistarEntidadesUi(gestfest);
+                UC02_RegistarEntidadesUI ui = new UC02_RegistarEntidadesUI(gestfest);
                 ui.run();
             } else if (opcao.equals("3")) {
-                UC03_EspecificarBilhetesUi ui = new UC03_EspecificarBilhetesUi(gestfest);
+                UC03_EspecificarBilhetesUI ui = new UC03_EspecificarBilhetesUI(gestfest);
                 ui.run();
             } else if (opcao.equals("4")) {
-                UC04_ConsultarInformacaoUi ui = new UC04_ConsultarInformacaoUi(gestfest);
+                UC04_ConsultarInformacaoUI ui = new UC04_ConsultarInformacaoUI(gestfest);
                 ui.run();
             }
             

@@ -15,13 +15,13 @@ import Utilitarios.Utils;
  *
  * @author 35191
  */
-public class UC06_AssociarEntidadeFestivalUi {
+public class UC06_AssociarEntidadeFestivalUI {
     private GESTFEST gestfest;
     private UC06_AssociarEntidadeFestivalController controller;
     private Festival festival;
     private Entidade entidade;
 
-    public UC06_AssociarEntidadeFestivalUi(GESTFEST gestfest){
+    public UC06_AssociarEntidadeFestivalUI(GESTFEST gestfest){
         this.gestfest = gestfest;
         controller = new UC06_AssociarEntidadeFestivalController(gestfest);
     }

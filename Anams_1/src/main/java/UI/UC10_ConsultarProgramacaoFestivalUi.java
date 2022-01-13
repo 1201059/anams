@@ -9,11 +9,11 @@ import Utilitarios.Utils;
  * @author 35191
  */
 
-public class UC10_ConsultarProgramacaoFestivalUi {
+public class UC10_ConsultarProgramacaoFestivalUI {
     private GESTFEST gestfest;
     private UC10_ConsultarProgramacaoFestivalController controller;
     
-    public UC10_ConsultarProgramacaoFestivalUi(GESTFEST gestfest){
+    public UC10_ConsultarProgramacaoFestivalUI(GESTFEST gestfest){
         this.gestfest = gestfest;
         controller = new UC10_ConsultarProgramacaoFestivalController(gestfest);
     }

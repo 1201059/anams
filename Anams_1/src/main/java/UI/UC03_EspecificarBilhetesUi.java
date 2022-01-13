@@ -13,11 +13,11 @@ import Utilitarios.Utils;
  *
  * @author 35191
  */
-public class UC03_EspecificarBilhetesUi {
+public class UC03_EspecificarBilhetesUI {
     private GESTFEST gestfest;
     private UC03_EspecificarBilhetesController controller;
 
-    public UC03_EspecificarBilhetesUi(GESTFEST gestfest){
+    public UC03_EspecificarBilhetesUI(GESTFEST gestfest){
         this.gestfest = gestfest;
         controller = new UC03_EspecificarBilhetesController(gestfest);
     }

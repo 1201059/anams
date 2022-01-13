@@ -11,11 +11,11 @@ import java.util.HashSet;
  *
  * @author 35191
  */
-public class UC09_DefinirProgramacaoFestivalUi {
+public class UC09_DefinirProgramacaoFestivalUI {
     private GESTFEST gestfest;
     private UC09_DefinirProgramacaoFestivalController controller;
     
-    public UC09_DefinirProgramacaoFestivalUi(GESTFEST gestfest){
+    public UC09_DefinirProgramacaoFestivalUI(GESTFEST gestfest){
         this.gestfest = gestfest;
         controller = new UC09_DefinirProgramacaoFestivalController(gestfest);
     }
