@@ -7,7 +7,7 @@ import java.util.Date;
 
 /**
  *
- * @author 35191
+ * @author grupo9
  */
 
 public class UC07_ConvidarArtistaParaFestivalController {

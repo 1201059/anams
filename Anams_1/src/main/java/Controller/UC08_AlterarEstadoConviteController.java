@@ -14,11 +14,11 @@ import java.util.ArrayList;
 public class UC08_AlterarEstadoConviteController {
     private final GESTFEST gestfest;
     private PedidoConvite pc;
-    
+
     public UC08_AlterarEstadoConviteController(GESTFEST gestfest) {
         this.gestfest = gestfest;
     }
-    
+
     public ArrayList<Convite> getListaConvites(){
         return this.gestfest.getListaConvites();
     }

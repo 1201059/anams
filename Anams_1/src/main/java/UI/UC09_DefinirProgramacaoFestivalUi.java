@@ -9,8 +9,9 @@ import java.util.HashSet;
 
 /**
  *
- * @author 35191
+ * @author grupo9
  */
+
 public class UC09_DefinirProgramacaoFestivalUI {
     private GESTFEST gestfest;
     private UC09_DefinirProgramacaoFestivalController controller;
@@ -32,11 +33,11 @@ public class UC09_DefinirProgramacaoFestivalUI {
             controller.guardarPrograma();
         }
     }
-    
+
     public String inserirFestival(){
         return Utils.readLineFromConsole("Insira o nome do festival a programar");
     }
-    
+
     public Artista procurarArtista(){
         return controller.procurarArtista(inserirArtista());
     }
@@ -44,7 +45,7 @@ public class UC09_DefinirProgramacaoFestivalUI {
     public String inserirArtista(){
         return Utils.readLineFromConsole("Insira o nome do artista");
     }
-    
+
     public HashSet<Atuacao> programarFestival(){
         HashSet<Atuacao> atuacoes = new HashSet<Atuacao>();
         do{
@@ -55,9 +56,8 @@ public class UC09_DefinirProgramacaoFestivalUI {
         }while(Utils.confirma("Pretende inserir mais atuacoes?"));
         return atuacoes;
     }
-    
+
     public void apresentarDados(){
         System.out.println(controller.apresentaDados());
     }
-    
 }

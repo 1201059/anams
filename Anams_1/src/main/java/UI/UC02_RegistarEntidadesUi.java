@@ -1,8 +1,3 @@
-/*
- * To change this license header, choose License Headers in Project Properties.
- * To change this template file, choose Tools | Templates
- * and open the template in the editor.
- */
 package UI;
 
 import Controller.UC02_RegistarEntidadesController;
@@ -11,8 +6,9 @@ import Utilitarios.Utils;
 
 /**
  *
- * @author 35191
+ * @author grupo9
  */
+
 public class UC02_RegistarEntidadesUI {
 
     private GESTFEST gestfest;
@@ -38,9 +34,8 @@ public class UC02_RegistarEntidadesUI {
     private String introduzDesignacao() {
         return Utils.readLineFromConsole("Introduz a designação da entidade");
     }
-    
+
     private void apresentaDados() {
         System.out.println("\nEntidade:\n" + controller.getEntidadeAsString());
     }
-
 }

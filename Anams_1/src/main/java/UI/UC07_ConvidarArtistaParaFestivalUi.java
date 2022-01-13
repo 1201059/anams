@@ -1,8 +1,3 @@
-/*
- * To change this license header, choose License Headers in Project Properties.
- * To change this template file, choose Tools | Templates
- * and open the template in the editor.
- */
 package UI;
 
 import Controller.UC07_ConvidarArtistaParaFestivalController;
@@ -12,8 +7,9 @@ import java.util.Date;
 
 /**
  *
- * @author 35191
+ * @author grupo
  */
+
 public class UC07_ConvidarArtistaParaFestivalUI {
 
     private GESTFEST gestfest;
@@ -28,7 +24,6 @@ public class UC07_ConvidarArtistaParaFestivalUI {
         System.out.println("\nConvidar artista para festival:");
         controller.novoPedidoConvite();
         introduzDados();
-
     }
 
     public void introduzDados() {
@@ -54,7 +49,5 @@ public class UC07_ConvidarArtistaParaFestivalUI {
     private void apresentaDados() {
         System.out.println("\nDados do processamento do pedido de encomenda:");
         System.out.println(controller.obterDados());
-
     }
-
 }

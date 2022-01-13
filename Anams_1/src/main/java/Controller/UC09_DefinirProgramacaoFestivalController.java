@@ -1,8 +1,3 @@
-/*
- * To change this license header, choose License Headers in Project Properties.
- * To change this template file, choose Tools | Templates
- * and open the template in the editor.
- */
 package Controller;
 
 import Model.Atuacao;
@@ -14,17 +9,18 @@ import java.util.HashSet;
 
 /**
  *
- * @author 35191
+ * @author grupo9
  */
+
 public class UC09_DefinirProgramacaoFestivalController {
     private GESTFEST gestfest;
     private Festival festival;
     private Programa programa;
-    
+
     public UC09_DefinirProgramacaoFestivalController(GESTFEST gestfest){
         this.gestfest = gestfest;
     }
-    
+
     public void consultarFestival(String fest){
         festival = gestfest.procuraFestival(fest);
         programa = new Programa();
@@ -32,21 +28,20 @@ public class UC09_DefinirProgramacaoFestivalController {
         programa.setDatainicio(festival.getDatainicio());
         programa.setDatafim(festival.getDatafim());
     }
-    
+
     public Artista procurarArtista(String artista){
         return gestfest.procuraArtista(artista);
     }
-    
+
     public void programarFestival(HashSet<Atuacao> atuacoes){
         programa.setAtuacao(atuacoes);
     }
-    
+
     public String apresentaDados(){
         return programa.toString();
     }
-    
+
     public void guardarPrograma(){
         gestfest.registarPrograma(programa);
     }
-    
 }

@@ -1,8 +1,3 @@
-/*
- * To change this license header, choose License Headers in Project Properties.
- * To change this template file, choose Tools | Templates
- * and open the template in the editor.
- */
 package UI;
 
 import Controller.UC03_EspecificarBilhetesController;
@@ -11,8 +6,9 @@ import Utilitarios.Utils;
 
 /**
  *
- * @author 35191
+ * @author grupo9
  */
+
 public class UC03_EspecificarBilhetesUI {
     private GESTFEST gestfest;
     private UC03_EspecificarBilhetesController controller;

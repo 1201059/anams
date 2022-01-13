@@ -1,8 +1,3 @@
-/*
- * To change this license header, choose License Headers in Project Properties.
- * To change this template file, choose Tools | Templates
- * and open the template in the editor.
- */
 package UI;
 
 import Controller.UC01_EspecificarTipoEntidadesController;
@@ -11,8 +6,9 @@ import Utilitarios.Utils;
 
 /**
  *
- * @author 35191
+ * @author grupo9
  */
+
 public class UC01_EspecificarTipoEntidadesUI {
     private GESTFEST gestfest;
     private UC01_EspecificarTipoEntidadesController controller;
@@ -24,7 +20,6 @@ public class UC01_EspecificarTipoEntidadesUI {
 
     public void run(){
         System.out.println("\nEspecificar tipos de Entidades:");
-
         do{
             controller.novoTipoEntidade();
             String tipo = introduzDados();
@@ -38,6 +33,7 @@ public class UC01_EspecificarTipoEntidadesUI {
             controller.inserirTipoEntidade();
         }
     }
+
     public String introduzDados(){
         return Utils.readLineFromConsole("Insira tipo de Entidades a inserir: ");
     }
@@ -45,8 +41,5 @@ public class UC01_EspecificarTipoEntidadesUI {
     public void apresentaDados(){
         System.out.println("\nEntidades: ");
         System.out.println(controller.getEntidadesAsString());
-    }
- 
-
-    
+    }    
 }

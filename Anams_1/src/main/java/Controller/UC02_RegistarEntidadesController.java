@@ -1,8 +1,3 @@
-/*
- * To change this license header, choose License Headers in Project Properties.
- * To change this template file, choose Tools | Templates
- * and open the template in the editor.
- */
 package Controller;
 
 import Model.Entidade;
@@ -11,10 +6,10 @@ import java.util.HashSet;
 
 /**
  *
- * @author 35191
+ * @author grupo9
  */
-public class UC02_RegistarEntidadesController {
 
+public class UC02_RegistarEntidadesController {
     private GESTFEST gestfest;
     private Entidade entidade;
 
@@ -33,12 +28,13 @@ public class UC02_RegistarEntidadesController {
     public HashSet<Entidade> getListaEntidades() {
         return this.gestfest.getLstEntidades();
     }
+
     public void registarEntidade(){
         this.gestfest.registarEntidade(this.entidade);
     }
+
     public String getEntidadeAsString(){
         return this.entidade.toString();
     }
     // public obter lista de tipos de entidade
-    
 }

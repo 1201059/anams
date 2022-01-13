@@ -1,8 +1,3 @@
-/*
- * To change this license header, choose License Headers in Project Properties.
- * To change this template file, choose Tools | Templates
- * and open the template in the editor.
- */
 package UI;
 
 import Controller.UC06_AssociarEntidadeFestivalController;
@@ -13,8 +8,9 @@ import Utilitarios.Utils;
 
 /**
  *
- * @author 35191
+ * @author grupo9
  */
+
 public class UC06_AssociarEntidadeFestivalUI {
     private GESTFEST gestfest;
     private UC06_AssociarEntidadeFestivalController controller;
@@ -52,5 +48,4 @@ public class UC06_AssociarEntidadeFestivalUI {
         System.out.println("\nEntidade: ");
         System.out.println(controller.getEntidadeAsString());
     }
-
 }

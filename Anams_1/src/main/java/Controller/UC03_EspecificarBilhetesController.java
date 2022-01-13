@@ -1,8 +1,3 @@
-/*
- * To change this license header, choose License Headers in Project Properties.
- * To change this template file, choose Tools | Templates
- * and open the template in the editor.
- */
 package Controller;
 
 import Model.Festival;
@@ -12,14 +7,15 @@ import java.util.HashSet;
 
 /**
  *
- * @author 35191
+ * @author grupo9
  */
+
 public class UC03_EspecificarBilhetesController{
     private GESTFEST gestfest;
     private Festival festival;
     private TipoBilhete tipoBilhete;
     private HashSet<TipoBilhete> lstTipoBilhete;
-    
+
     public UC03_EspecificarBilhetesController(GESTFEST gestfest){
         gestfest = gestfest;
     }
@@ -39,7 +35,7 @@ public class UC03_EspecificarBilhetesController{
     public void inserirTiposBilhete(){
         gestfest.setLstTipoBilhete(lstTipoBilhete);
     }
-    
+
     public String getBilhetesAsString(){
         StringBuffer sb = new StringBuffer();
         for(TipoBilhete tb : lstTipoBilhete){
@@ -47,5 +43,4 @@ public class UC03_EspecificarBilhetesController{
         }
         return sb.toString();
     }
-    
 }
