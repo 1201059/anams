@@ -1,18 +1,14 @@
-/*
- * To change this license header, choose License Headers in Project Properties.
- * To change this template file, choose Tools | Templates
- * and open the template in the editor.
- */
 package Model;
 
 import java.util.Objects;
 
 /**
  *
- * @author 35191
+ * @author grupo9
  */
+
 class Notificacao {
-/**
+    /**
      * O email do destinatario da notificação
      */
     private String email;
@@ -108,12 +104,8 @@ class Notificacao {
      */
     @Override
     public boolean equals(Object obj) {
-        if (this == obj) {
-            return true;
-        }
-        if (obj == null) {
-            return false;
-        }
+        if (this == obj) { return true; }
+        if (obj == null) { return false; }
         if (getClass() != obj.getClass()) {
             return false;
         }
@@ -134,4 +126,3 @@ class Notificacao {
         return "Email: " + email + " Descrição: " + descricao;
     }
 }
-

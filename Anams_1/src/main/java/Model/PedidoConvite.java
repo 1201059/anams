@@ -1,26 +1,19 @@
-/*
- * To change this license header, choose License Headers in Project Properties.
- * To change this template file, choose Tools | Templates
- * and open the template in the editor.
- */
 package Model;
 
 import java.util.Date;
 
 /**
  *
- * @author 35191
+ * @author grupo9
  */
-public class PedidoConvite {
 
+public class PedidoConvite {
     public Convite convite;
     public Date dataPedido;
     private int codPedidoConvite;
     private static int nrPedidosConvite = 0;
 
-    public enum Estado {
-        Processamento, Pronto
-    };
+    public enum Estado { Processamento, Pronto };
 
     private Estado estado;
     public static final Estado ESTADO_DEFAULT = Estado.Processamento;
@@ -59,7 +52,6 @@ public class PedidoConvite {
     }
 
     public void setDataPedido(Date dataPedido) {
-
         this.dataPedido = dataPedido;
     }
 
@@ -85,12 +77,8 @@ public class PedidoConvite {
 
     @Override
     public boolean equals(Object obj) {
-        if (this == obj) {
-            return true;
-        }
-        if (obj == null || getClass() != obj.getClass()) {
-            return false;
-        }
+        if (this == obj) { return true; }
+        if (obj == null || getClass() != obj.getClass()) { return false; }
         final PedidoConvite other = (PedidoConvite) obj;
         return this.convite.equals(other.convite)
                 && this.dataPedido.equals(other.dataPedido)

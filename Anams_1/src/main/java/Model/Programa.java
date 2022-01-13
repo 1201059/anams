@@ -65,8 +65,4 @@ public class Programa {
     public void setAtuacao(HashSet<Atuacao> atuacao) {
         this.atuacao = atuacao;
     }
-    
-    
-    
-    
 }

@@ -11,7 +11,6 @@ import java.util.List;
  */
 
 public class GESTFEST {
-
     private String designacao;
     private Date dataCriacao;
     private int nif;
@@ -25,7 +24,6 @@ public class GESTFEST {
     private List<PedidoConvite> lstPedidosConvite;
     private List<Convite> lstConvite;
     private List<Programa> lstPrograma;
-    
 
     private static final String STR_DEFAULT = "";
     private static final int INT_DEFAULT = 0;
@@ -172,9 +170,8 @@ public class GESTFEST {
 
     public boolean validaCliente(Artista artista) {
         return artista.valida();
-
     }
-    
+
     private boolean valida(Artista Artista) {
         boolean bRet = true;
         for (Artista a : this.lstArtistas) {
@@ -185,7 +182,7 @@ public class GESTFEST {
         }
         return bRet;
     }
-    
+
     public boolean registaArtista(Artista artista) {
         if (this.valida(artista)) {
             this.gerarPassword(artista);
@@ -204,8 +201,8 @@ public class GESTFEST {
         }
         return new Artista();
     }
-    
-     public boolean registaConvite(Convite c) {
+
+    public boolean registaConvite(Convite c) {
         if (this.validaConvite(c) == true) {
             Notificacao n = new Notificacao(c.getArtista().getEmail());
             this.addConvite(c);
@@ -213,6 +210,7 @@ public class GESTFEST {
         }
         return false;
     }
+
     private boolean validaConvite(Convite c) {
         for (Convite convite : this.lstConvite) {
             if (convite.equals(c)) {
@@ -221,7 +219,7 @@ public class GESTFEST {
         }
         return true;
     }
-    
+
     private boolean addConvite(Convite c) {
         return this.lstConvite.add(c);
     }
@@ -238,5 +236,4 @@ public class GESTFEST {
         }
         return new Programa();
     }
-    
 }

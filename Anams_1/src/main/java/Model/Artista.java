@@ -1,18 +1,13 @@
-/*
- * To change this license header, choose License Headers in Project Properties.
- * To change this template file, choose Tools | Templates
- * and open the template in the editor.
- */
 package Model;
 
 import java.util.Date;
 
 /**
  *
- * @author 35191
+ * @author grupo9
  */
-public class Artista {
 
+public class Artista {
     /**
      * O nome completo.
      */
@@ -41,7 +36,6 @@ public class Artista {
      * A password.
      */
     private String password;
-
     /**
      * O nome do cliente por omissão.
      */
@@ -66,11 +60,11 @@ public class Artista {
      * A password do cliente por omissão.
      */
     private static final String password_por_omissao = "";
-
     /**
      * Constroi uma instancia de cliente com valores por omissao aos devidos
      * atributos
      */
+
     public Artista() {
         this.setNomeComp(nomeComp_por_omissao);
         this.setNIF(nif_por_omissao);
@@ -79,7 +73,6 @@ public class Artista {
         this.setEmail(email_por_omissao);
         this.setEndereco(endereco_por_omissao);
         this.setPassword(password_por_omissao);
-
     }
 
     /**
@@ -100,14 +93,13 @@ public class Artista {
         this.setTelemovel(nrTelemovel);
         this.setEmail(email);
         this.setEndereco(endereco);
-
     }
 
     /**
      * Constroi uma instancia de cliente por copia do cliente passado por
      * parametro
      *
-     * @param c O cliente a copiar
+     * @param a O Artista a copiar
      */
     public Artista(Artista a) {
         this.setNomeComp(a.nomeComp);
@@ -117,7 +109,6 @@ public class Artista {
         this.setEmail(a.email);
         this.setEndereco(a.endereco);
         this.setPassword(a.password);
-
     }
 
     /**
@@ -254,14 +245,13 @@ public class Artista {
     public boolean valida() {
         boolean condicao = true;
         if (this.nomeComp.equalsIgnoreCase(nomeComp_por_omissao)
-                || this.nif.equalsIgnoreCase(nif_por_omissao)
-                || this.email.equalsIgnoreCase(email_por_omissao)
-                || this.endereco.equalsIgnoreCase(endereco_por_omissao)
-                || this.dataNasc.equals(new Date())
-                || this.telemovel == telemovel_por_omissao) {
+                && this.nif.equalsIgnoreCase(nif_por_omissao)
+                && this.email.equalsIgnoreCase(email_por_omissao)
+                && this.endereco.equalsIgnoreCase(endereco_por_omissao)
+                && this.dataNasc.equals(new Date())
+                && this.telemovel == telemovel_por_omissao) {
             condicao = false;
         }
-
         return condicao;
     }
 
@@ -293,14 +283,9 @@ public class Artista {
      */
     @Override
     public boolean equals(Object outroObjeto) {
-        if (this == outroObjeto) {
-            return true;
-        }
-        if (outroObjeto == null || getClass() != outroObjeto.getClass()) {
-            return false;
-        }
+        if (this == outroObjeto) { return true; }
+        if (outroObjeto == null || getClass() != outroObjeto.getClass()) { return false; }
         Artista obj = (Artista) outroObjeto;
-
         return (this.nomeComp.equalsIgnoreCase(obj.nomeComp)
                 && this.dataNasc.equals(obj.dataNasc)
                 && this.nif.equalsIgnoreCase(obj.nif)
@@ -308,7 +293,5 @@ public class Artista {
                 && this.endereco.equalsIgnoreCase(obj.endereco)
                 && this.telemovel == obj.telemovel
                 && this.password.equals(obj.password));
-
     }
-    
 }

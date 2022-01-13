@@ -42,7 +42,4 @@ public class Atuacao {
     public void setData(Date data) {
         this.data = data;
     }
-    
-    
-    
 }

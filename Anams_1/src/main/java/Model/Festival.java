@@ -5,8 +5,9 @@ import java.util.HashSet;
 
 /**
  *
- * @author 35191
+ * @author grupo9
  */
+
 public class Festival {
     private int referencia;
     private String designacao;
@@ -18,7 +19,7 @@ public class Festival {
     private int qntdPalcos;
     private int lotacaoPalcos;
     private HashSet<Entidade> entidades;
-    
+
     public Festival(){
         this.referencia=referencia;
         this.designacao=designacao;
@@ -31,6 +32,7 @@ public class Festival {
         this.lotacaoPalcos=lotacaoPalcos;
         this.entidades= new HashSet <>();
     }
+
     public Festival(int referencia, String designacao, int edicao, String localizacao, Date datainicio, Date datafim, String recinto, int qntdPalcos, int lotacaoPalcos ){
         this.referencia=referencia;
         this.designacao=designacao;
@@ -43,6 +45,7 @@ public class Festival {
         this.lotacaoPalcos=lotacaoPalcos;
         this.entidades= new HashSet <>();
     }
+
     public Festival (Festival fest){
         this.referencia=fest.referencia;
         this.designacao=fest.designacao;
@@ -55,7 +58,7 @@ public class Festival {
         this.lotacaoPalcos=fest.lotacaoPalcos;
         this.entidades= new HashSet <>();
     }
-    
+
     public String getDesignacao() {
         return designacao;
     }
@@ -91,7 +94,7 @@ public class Festival {
     public HashSet<Entidade> getEntidades() {
         return entidades;
     }
-    
+
     public void setDesignacao(String designacao) {
         this.designacao = designacao;
     }
@@ -127,14 +130,10 @@ public class Festival {
     public void setEntidades(HashSet<Entidade> entidades) {
         this.entidades = entidades;
     }
-    
+
     public boolean equals(Object obj) {
-        if (this == obj) {
-            return true;
-        }
-        if (obj == null || getClass() != obj.getClass()) {
-            return false;
-        }
+        if (this == obj) { return true; }
+        if (obj == null || getClass() != obj.getClass()) { return false; }
         final Festival other = (Festival) obj;
         return this.edicao == other.edicao
                 && this.referencia== other.referencia
@@ -151,5 +150,4 @@ public class Festival {
     public String toString() {
         return "Festival{" + "referencia=" + referencia + ", designacao=" + designacao + ", edicao=" + edicao + ", localizacao=" + localizacao + ", datainicio=" + datainicio + ", datafim=" + datafim + ", recinto=" + recinto + ", qntdPalcos=" + qntdPalcos + ", lotacaoPalcos=" + lotacaoPalcos + '}';
     }
-    
 }
