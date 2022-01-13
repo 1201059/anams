@@ -1,4 +1,4 @@
-package Ui;
+package UI;
 
 import Controller.UC09_DefinirProgramacaoFestivalController;
 import Model.Atuacao;

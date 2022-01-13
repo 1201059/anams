@@ -1,4 +1,4 @@
-package Ui;
+package UI;
 
 import Controller.UC10_ConsultarProgramacaoFestivalController;
 import Model.GESTFEST;
