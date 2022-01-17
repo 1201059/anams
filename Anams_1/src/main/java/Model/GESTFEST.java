@@ -22,7 +22,7 @@ public class GESTFEST {
     private HashSet<TipoBilhete> lstTipoBilhetes;
     private HashSet<Artista> lstArtistas;
     private List<PedidoConvite> lstPedidosConvite;
-    private List<Convite> lstConvite;
+    private ArrayList<Convite> lstConvite;
     private List<Programa> lstPrograma;
 
     private static final String STR_DEFAULT = "";
@@ -184,13 +184,7 @@ public class GESTFEST {
     }
 
     public boolean registaArtista(Artista artista) {
-        if (this.valida(artista)) {
-            this.gerarPassword(artista);
-            Notificacao n = new Notificacao(artista.getEmail(), artista.getPassword());
-            registarNotificacao(n);
-            return adicionaArtista(artista);
-        }
-        return false;
+        
     }
 
     public Artista procuraArtista(String artista){
@@ -235,5 +229,18 @@ public class GESTFEST {
             }
         }
         return new Programa();
+    }
+
+    public ArrayList<Convite> getListaConvite() {
+        return lstConvite;
+    }
+
+    public Artista getArtista(String artista) {
+        for(Artista a : lstArtistas){
+            if(a.getNomeComp().equals(artista)){
+                return a;
+            }
+        }
+        return new Artista();
     }
 }

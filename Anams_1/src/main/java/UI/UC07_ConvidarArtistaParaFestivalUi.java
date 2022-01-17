@@ -1,17 +1,19 @@
 package UI;
 
 import Controller.UC07_ConvidarArtistaParaFestivalController;
+import Model.Artista;
+import Model.Convite;
+import Model.Festival;
 import Model.GESTFEST;
 import Utilitarios.Utils;
-import java.util.Date;
+import java.util.ArrayList;
 
 /**
  *
- * @author grupo
+ * @author grupo 9
  */
 
 public class UC07_ConvidarArtistaParaFestivalUI {
-
     private GESTFEST gestfest;
     private UC07_ConvidarArtistaParaFestivalController controller;
 
@@ -23,27 +25,39 @@ public class UC07_ConvidarArtistaParaFestivalUI {
     public void run() {
         System.out.println("\nConvidar artista para festival:");
         controller.novoPedidoConvite();
-        introduzDados();
+        //listaConvites();
+        introduzirFestival();
+        introduzArtista();
     }
 
-    public void introduzDados() {
+    /*
+    
+    private void listaConvites(){
         System.out.println("Lista de convites: \n");
-        if (controller.getListaConvite().isEmpty()) {
+        ArrayList<Convite> convites = new ArrayList<Convite>();
+        if(convites.isEmpty()) {
             System.out.println("Não existem convites para efetuar.");
-        } else {
-            System.out.println(controller.getListaConvite());
-            int refBancaria = Utils.IntFromConsole("Introduza o artista do convite: ");
-            if (controller.obterConvite(artista) != null) {
-                controller.setConvite();
-                Date dataPedido = Utils.readDateFromConsole("Introduza a data do pedido do convite: ");
-                if (controller.setDados(dataPedido) == false) {
-                    System.out.println("A data do pedido do convite é inferior à data do festival! Operação cancelada");
-                } else {
-                    apresentaDados();
-
-                }
-            }
+        }else {
+            System.out.println(convites);
         }
+    }
+    
+    */
+    
+    private void introduzirFestival(){
+        Festival festival;
+        do{
+            festival = controller.getFestival(Utils.readLineFromConsole("Insira o nome do festival:"));
+        }while(festival.equals(new Festival()));
+        controller.setFestival(festival);
+    }
+
+    private void introduzArtista() {
+        Artista artista;
+        do{
+            artista = controller.getArtista(Utils.readLineFromConsole("Introduza o artista a convidar:"));
+        }while(artista.equals(new Artista()));
+        controller.setArtista(artista);
     }
 
     private void apresentaDados() {

@@ -1,9 +1,11 @@
 package Controller;
 
+import Model.Artista;
 import Model.Convite;
+import Model.Festival;
 import Model.GESTFEST;
 import Model.PedidoConvite;
-import java.util.Date;
+import java.util.ArrayList;
 
 /**
  *
@@ -11,7 +13,6 @@ import java.util.Date;
  */
 
 public class UC07_ConvidarArtistaParaFestivalController {
-
     private GESTFEST gestfest;
     private PedidoConvite pedidoConvite;
     private Convite convite;
@@ -31,5 +32,33 @@ public class UC07_ConvidarArtistaParaFestivalController {
 
     public boolean valida() {
         return this.pedidoConvite.valida();
+    }
+
+    /*
+    
+    public ArrayList<Convite> getListaConvite() {
+        return gestfest.getListaConvite();
+    }
+    
+    */
+
+    public void setArtista(Artista artista) {
+        this.convite.setArtista(artista);
+    }
+
+    public Artista getArtista(String artista) {
+        return gestfest.getArtista(artista);
+    }
+
+    public void confirmarDados(){
+        this.gestfest.inserirConvite();
+    }
+
+    public void setFestival(Festival festival) {
+        this.convite.setFestival(festival);
+    }
+
+    public Festival getFestival(String festival) {
+        return gestfest.procuraFestival(festival);
     }
 }

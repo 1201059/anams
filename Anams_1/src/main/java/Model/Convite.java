@@ -10,33 +10,34 @@ import java.util.List;
  */
 
 public class Convite implements Comparable<Convite> {
-    private List<Item> lstItens;
+    public enum Estado{sem_resposta, aceite, rejeitado, anulado};
+    private int referencia;
     private Artista artista;
+    private Festival festival;
     private Date dataConvite;
-
-    public enum Estado { Aguardar_Pagamento, Pago, Cancelado };
     private Estado estado;
-    public static final Estado ESTADO_DEFAULT = Estado.Aguardar_Pagamento;
 
-    public Convite(Artista art) {
-        this.lstItens = new ArrayList<>();
-        this.setArtista(art);
-        this.setDataConvite(new Date());
-        this.setEstado(ESTADO_DEFAULT);
+    private static int contador = 0;
+    private static final Estado ESTADO_DEFAULT = Estado.sem_resposta;
+    
+    public Convite(){
+        this.referencia = ++contador;
+        this.artista = new Artista();
+        this.festival = new Festival();
+        this.dataConvite = new Date();
+        this.estado = ESTADO_DEFAULT;
     }
 
-    public Convite() {
-        this.lstItens = new ArrayList<>();
-        this.setArtista(new Artista());
-        this.setDataConvite(new Date());
-        this.setEstado(ESTADO_DEFAULT);
+    public Convite(Convite convite) {
+        this.referencia = convite.referencia;
+        this.artista = convite.artista;
+        this.festival = convite.festival;
+        this.dataConvite = convite.dataConvite;
+        this.estado = convite.estado;
     }
 
-    public Convite(Convite c) {
-        this.lstItens = new ArrayList<>(c.lstItens);
-        this.setArtista(c.artista);
-        this.setDataConvite(c.dataConvite);
-        this.setEstado(c.estado);
+    public int getReferencia() {
+        return referencia;
     }
 
     public Estado getEstado() {
@@ -63,54 +64,34 @@ public class Convite implements Comparable<Convite> {
         this.artista = artista;
     }
 
-    public List<Item> getLstItem() {
-        return lstItens;
+    public Festival getFestival() {
+        return festival;
     }
 
-    public void setLstItens(List<Item> lstItens) {
-        this.lstItens = new ArrayList<>(lstItens);
+    public void setFestival(Festival festival) {
+        this.festival = festival;
     }
+    
+    
 
     @Override
     public boolean equals(Object outroObjeto) {
         if (this == outroObjeto) { return true; }
         if (outroObjeto == null || getClass() != outroObjeto.getClass()) { return false; }
         Convite obj = (Convite) outroObjeto;
-        return (this.lstItens.equals(obj.lstItens) && this.artista.equals(obj.artista) && this.dataConvite.equals(obj.dataConvite));
+        return (this.referencia == obj.referencia
+                && this.artista.equals(obj.artista)
+                && this.festival.equals(obj.festival)
+                && this.dataConvite.equals(obj.dataConvite)
+                && this.estado.equals(obj.estado));
     }
 
     @Override
     public String toString() {
         StringBuilder sb = new StringBuilder();
         sb.append("Convite feito ao artista: ").append(artista.getEmail()).append(" na data:").append(this.dataConvite.toString()).append("\n");
-        for (Item i : this.lstItens) {
-            sb.append(i.toString());
-        }
         sb.append("\nEstado: ").append(this.estado).append("\n");
         return sb.toString();
-    }
-
-    public boolean validaItem(Item it) {
-        return it.valida();
-    }
-
-    public void adicionaItem(Item it) {
-        if (this.valida(it) == true) {
-            this.addItem(it);
-        }
-    }
-
-    private boolean valida(Item it) {
-        for (Item i : this.lstItens) {
-            if (i.equals(it)) {
-                return false;
-            }
-        }
-        return true;
-    }
-
-    private void addItem(Item it) {
-        this.lstItens.add(it);
     }
 
     @Override
