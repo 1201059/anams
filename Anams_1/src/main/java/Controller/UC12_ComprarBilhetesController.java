@@ -5,10 +5,19 @@
  */
 package Controller;
 
+import Model.Festival;
+import Model.GESTFEST;
+
 /**
  *
  * @author 35191
  */
 public class UC12_ComprarBilhetesController {
     
+    private GESTFEST gestfest;
+    private Festival festival;
+
+    public UC12_ComprarBilhetesController(GESTFEST gestfest) {
+        this.gestfest = gestfest;
+    }
 }

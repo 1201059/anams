@@ -5,24 +5,25 @@
  */
 package UI;
 
-import Controller.UC13_ConsultarVendasBilhetesController;
+import Controller.UC12_ComprarBilhetesController;
 import Model.GESTFEST;
 
 /**
  *
  * @author 35191
  */
-public class UC13_ConsultarVendasBilhetesUI {
+class UC12_ComprarBilhetesUI {
 
     private GESTFEST gestfest;
-    private UC13_ConsultarVendasBilhetesController controller;
+    private UC12_ComprarBilhetesController controller;
 
-    public UC13_ConsultarVendasBilhetesUI(GESTFEST gestfest) {
+    public UC12_ComprarBilhetesUI(GESTFEST gestfest) {
         this.gestfest = gestfest;
-        controller = new UC13_ConsultarVendasBilhetesController(gestfest);
+        controller = new UC12_ComprarBilhetesController(gestfest);
     }
 
     public void run() {
 
     }
+
 }

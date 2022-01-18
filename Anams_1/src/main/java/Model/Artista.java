@@ -33,10 +33,6 @@ public class Artista {
      */
     private String endereco;
     /**
-     * A password.
-     */
-    private String password;
-    /**
      * O nome do cliente por omissão.
      */
     private static final String nomeComp_por_omissao = "";
@@ -57,10 +53,6 @@ public class Artista {
      */
     private static final String endereco_por_omissao = "";
     /**
-     * A password do cliente por omissão.
-     */
-    private static final String password_por_omissao = "";
-    /**
      * Constroi uma instancia de cliente com valores por omissao aos devidos
      * atributos
      */
@@ -72,7 +64,7 @@ public class Artista {
         this.setTelemovel(telemovel_por_omissao);
         this.setEmail(email_por_omissao);
         this.setEndereco(endereco_por_omissao);
-        this.setPassword(password_por_omissao);
+        
     }
 
     /**
@@ -108,25 +100,7 @@ public class Artista {
         this.setTelemovel(a.telemovel);
         this.setEmail(a.email);
         this.setEndereco(a.endereco);
-        this.setPassword(a.password);
-    }
-
-    /**
-     * Devolve a password do cliente.
-     *
-     * @return Password do cliente
-     */
-    public String getPassword() {
-        return password;
-    }
-
-    /**
-     * Modifica a password do cliente.
-     *
-     * @param password A password do cliente.
-     */
-    public void setPassword(String password) {
-        this.password = password;
+       
     }
 
     /**
@@ -291,7 +265,6 @@ public class Artista {
                 && this.nif.equalsIgnoreCase(obj.nif)
                 && this.email.equalsIgnoreCase(obj.email)
                 && this.endereco.equalsIgnoreCase(obj.endereco)
-                && this.telemovel == obj.telemovel
-                && this.password.equals(obj.password));
+                && this.telemovel == obj.telemovel);
     }
 }

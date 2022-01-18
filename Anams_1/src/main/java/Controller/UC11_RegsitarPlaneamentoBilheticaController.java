@@ -5,10 +5,20 @@
  */
 package Controller;
 
+import Model.Festival;
+import Model.GESTFEST;
+
 /**
  *
  * @author 35191
  */
 public class UC11_RegsitarPlaneamentoBilheticaController {
-    
+
+    private GESTFEST gestfest;
+    private Festival festival;
+
+    public UC11_RegsitarPlaneamentoBilheticaController(GESTFEST gestfest) {
+        this.gestfest = gestfest;
+    }
+
 }

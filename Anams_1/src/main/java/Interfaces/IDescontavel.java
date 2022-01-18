@@ -3,12 +3,12 @@
  * To change this template file, choose Tools | Templates
  * and open the template in the editor.
  */
-package UI;
+package Interfaces;
 
 /**
  *
  * @author 35191
  */
-public class UC12_ComprarBilhetesUi {
-    
+public interface IDescontavel {
+    public float obterDesconto(int qtd);
 }

@@ -28,6 +28,8 @@ public class MenuInicial {
             System.out.println("1.Administrador da Plataforma");
             System.out.println("2.Responsável pelo registo do Festival");
             System.out.println("3.Responsável pelo programação do Festival");
+            System.out.println("4.Responsável pela bilhétiva do festival");
+            System.out.println("5.Utilizador não registado");
             System.out.println("0.Sair");
 
             opcao = Utils.readLineFromConsole("Introduza a opção");
@@ -40,6 +42,10 @@ public class MenuInicial {
             } else if (opcao.equals("3")) {
                 MenuRPF ui = new MenuRPF(gestfest);
                 ui.run();
+            } else if (opcao.equals("4")){
+                MenuRBF ui= new MenuRBF(gestfest);
+            }else if (opcao.equals("5")){
+                MenuUNR ui = new MenuUNR (gestfest);
             }
         } while (!opcao.equals("0"));
     }
