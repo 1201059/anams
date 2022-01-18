@@ -41,5 +41,5 @@ public class UC01_EspecificarTipoEntidadesUI {
     public void apresentaDados(){
         System.out.println("\nEntidades: ");
         System.out.println(controller.getEntidadesAsString());
-    }    
+    }
 }
