@@ -216,14 +216,14 @@ public class Artista {
      *
      * @return True caso o cliente seja valido
      */
-    public boolean valida() {
+    public boolean valida(Artista a) {
         boolean condicao = true;
-        if (this.nomeComp.equalsIgnoreCase(nomeComp_por_omissao)
-                && this.nif.equalsIgnoreCase(nif_por_omissao)
-                && this.email.equalsIgnoreCase(email_por_omissao)
-                && this.endereco.equalsIgnoreCase(endereco_por_omissao)
-                && this.dataNasc.equals(new Date())
-                && this.telemovel == telemovel_por_omissao) {
+        if (this.nomeComp.equalsIgnoreCase(a.nomeComp)
+                && this.nif.equalsIgnoreCase(a.nif)
+                && this.email.equalsIgnoreCase(a.email)
+                && this.endereco.equalsIgnoreCase(a.endereco)
+                && this.dataNasc.equals(a.dataNasc)
+                && this.telemovel == a.telemovel) {
             condicao = false;
         }
         return condicao;

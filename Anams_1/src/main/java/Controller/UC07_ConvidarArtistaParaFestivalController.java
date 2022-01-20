@@ -41,15 +41,19 @@ public class UC07_ConvidarArtistaParaFestivalController {
         return gestfest.getArtista(artista);
     }
 
-    public void confirmarDados(){
-        this.gestfest.inserirConvite();
-    }
-
     public void setFestival(Festival festival) {
         this.convite.setFestival(festival);
     }
 
     public Festival getFestival(String festival) {
         return gestfest.procuraFestival(festival);
+    }
+    
+    public String obterDados(){
+        return this.convite.toString();
+    }
+
+    public void confirmarDados(){
+        this.gestfest.registaConvite(convite);
     }
 }

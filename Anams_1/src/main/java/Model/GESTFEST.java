@@ -168,10 +168,6 @@ public class GESTFEST {
         return new Artista();
     }
 
-    public boolean validaCliente(Artista artista) {
-        return artista.valida();
-    }
-
     private boolean valida(Artista Artista) {
         boolean bRet = true;
         for (Artista a : this.lstArtistas) {
@@ -183,8 +179,26 @@ public class GESTFEST {
         return bRet;
     }
 
-    public boolean registaArtista(Artista artista) {
-        
+    public boolean registaArtista(Artista a) {
+        if (this.validaArtista(a) == true) {
+            Notificacao n = new Notificacao(a.getEmail(), "Novo artista registado");
+            this.addArtista(a);
+            return true;
+        }
+        return false;
+    }
+
+    private boolean validaArtista(Artista a) {
+        for (Artista artista : this.lstArtistas) {
+            if (artista.equals(a)) {
+                return false;
+            }
+        }
+        return true;
+    }
+
+    private boolean addArtista(Artista a) {
+        return this.lstArtistas.add(a);
     }
 
     public Artista procuraArtista(String artista){
@@ -198,7 +212,7 @@ public class GESTFEST {
 
     public boolean registaConvite(Convite c) {
         if (this.validaConvite(c) == true) {
-            Notificacao n = new Notificacao(c.getArtista().getEmail());
+            Notificacao n = new Notificacao(c.getArtista().getEmail(), "Novo convite registado");
             this.addConvite(c);
             return true;
         }

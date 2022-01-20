@@ -8,7 +8,7 @@ import Utilitarios.Utils;
 
 /**
  *
- * @author grupo 9
+ * @author grupo9
  */
 
 public class UC07_ConvidarArtistaParaFestivalUI {
@@ -23,11 +23,10 @@ public class UC07_ConvidarArtistaParaFestivalUI {
     public void run() {
         System.out.println("\nConvidar artista para festival:");
         controller.novoPedidoConvite();
-        //listaConvites();
         introduzirFestival();
         introduzArtista();
     }
-    
+
     private void introduzirFestival(){
         Festival festival;
         do{
