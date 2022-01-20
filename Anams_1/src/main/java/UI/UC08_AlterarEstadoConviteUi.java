@@ -10,7 +10,6 @@ import Utilitarios.Utils;
  */
 
 public class UC08_AlterarEstadoConviteUI {
-
     private GESTFEST gestfest;
     private UC08_AlterarEstadoConviteController controller;
 

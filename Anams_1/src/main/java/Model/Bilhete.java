@@ -7,7 +7,7 @@ import java.util.Objects;
  * @author grupo9
  */
 
-public abstract class Bilhete {
+public class Bilhete {
     private int codigoBilhete;
     private Festival bilheteFestival;
 

@@ -5,7 +5,6 @@ import Model.Convite;
 import Model.Festival;
 import Model.GESTFEST;
 import Model.PedidoConvite;
-import java.util.ArrayList;
 
 /**
  *
@@ -33,14 +32,6 @@ public class UC07_ConvidarArtistaParaFestivalController {
     public boolean valida() {
         return this.pedidoConvite.valida();
     }
-
-    /*
-    
-    public ArrayList<Convite> getListaConvite() {
-        return gestfest.getListaConvite();
-    }
-    
-    */
 
     public void setArtista(Artista artista) {
         this.convite.setArtista(artista);

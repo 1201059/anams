@@ -25,7 +25,6 @@ public class UC05_RegistoFestivalUI {
     public void run() {
         System.out.println("\nNovo Festival:");
         controller.novoFestival();
-
         controller.setDesignacao(introduzDesignacao());
         controller.setEdicao(introduzEdicao());
         controller.setLocalizacao(introduzLocalizacao());

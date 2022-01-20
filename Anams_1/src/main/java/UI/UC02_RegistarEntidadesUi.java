@@ -10,7 +10,6 @@ import Utilitarios.Utils;
  */
 
 public class UC02_RegistarEntidadesUI {
-
     private GESTFEST gestfest;
     private UC02_RegistarEntidadesController controller;
 
@@ -24,7 +23,6 @@ public class UC02_RegistarEntidadesUI {
         controller.novaEntidade();
         controller.setDesignacao(introduzDesignacao());
         apresentaDados();
-
         if (Utils.confirma(" Confirma os dados da Entidade? Sim/Não")) {
             controller.registarEntidade();
             System.out.println("Entidade registada com sucesso.");

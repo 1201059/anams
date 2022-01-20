@@ -6,8 +6,8 @@ package Model;
  */
 
 public class TipoEntidade {
-    
-private String TipoEntidade;
+    private String TipoEntidade;
+
     public TipoEntidade(){
         this.TipoEntidade=TipoEntidade;
     }

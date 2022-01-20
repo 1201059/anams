@@ -2,11 +2,9 @@ package UI;
 
 import Controller.UC07_ConvidarArtistaParaFestivalController;
 import Model.Artista;
-import Model.Convite;
 import Model.Festival;
 import Model.GESTFEST;
 import Utilitarios.Utils;
-import java.util.ArrayList;
 
 /**
  *
@@ -29,20 +27,6 @@ public class UC07_ConvidarArtistaParaFestivalUI {
         introduzirFestival();
         introduzArtista();
     }
-
-    /*
-    
-    private void listaConvites(){
-        System.out.println("Lista de convites: \n");
-        ArrayList<Convite> convites = new ArrayList<Convite>();
-        if(convites.isEmpty()) {
-            System.out.println("Não existem convites para efetuar.");
-        }else {
-            System.out.println(convites);
-        }
-    }
-    
-    */
     
     private void introduzirFestival(){
         Festival festival;

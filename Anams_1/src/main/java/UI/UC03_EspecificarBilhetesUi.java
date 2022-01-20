@@ -20,7 +20,6 @@ public class UC03_EspecificarBilhetesUI {
 
     public void run(){
         System.out.println("\nEspecificar Bilhetes");
-
         do{
             controller.novoTipoBilhete();
             String tipo = introduzDados();

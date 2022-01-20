@@ -9,7 +9,7 @@ public class Programa {
     private Date datainicio;
     private Date datafim;
     private HashSet<Atuacao> atuacao;
-    
+
     public Programa(){
         this.referencia=referencia;
         this.festival=festival;
