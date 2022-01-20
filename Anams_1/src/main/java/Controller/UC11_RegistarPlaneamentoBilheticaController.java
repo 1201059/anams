@@ -15,4 +15,10 @@ public class UC11_RegistarPlaneamentoBilheticaController {
     public UC11_RegistarPlaneamentoBilheticaController(GESTFEST gestfest) {
         this.gestfest = gestfest;
     }
+
+    public void run(){
+        System.out.println("Registar Planeamento de Bilhética");
+
+        
+    }
 }
