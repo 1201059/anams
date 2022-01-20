@@ -4,7 +4,6 @@ import Model.Artista;
 import Model.Convite;
 import Model.Festival;
 import Model.GESTFEST;
-import Model.PedidoConvite;
 
 /**
  *
@@ -13,7 +12,6 @@ import Model.PedidoConvite;
 
 public class UC07_ConvidarArtistaParaFestivalController {
     private GESTFEST gestfest;
-    private PedidoConvite pedidoConvite;
     private Convite convite;
 
     public UC07_ConvidarArtistaParaFestivalController(GESTFEST gestfest) {
@@ -21,16 +19,11 @@ public class UC07_ConvidarArtistaParaFestivalController {
     }
 
     public void novoPedidoConvite() {
-        this.pedidoConvite =  new PedidoConvite();
-    }
-
-    public void setConvite() {
-        this.pedidoConvite.setConvite(this.convite);
-        this.pedidoConvite.valida();
+        this.convite =  new Convite();
     }
 
     public boolean valida() {
-        return this.pedidoConvite.valida();
+        return this.convite.valida();
     }
 
     public void setArtista(Artista artista) {
@@ -48,7 +41,7 @@ public class UC07_ConvidarArtistaParaFestivalController {
     public Festival getFestival(String festival) {
         return gestfest.procuraFestival(festival);
     }
-    
+
     public String obterDados(){
         return this.convite.toString();
     }

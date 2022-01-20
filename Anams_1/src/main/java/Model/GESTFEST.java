@@ -21,7 +21,6 @@ public class GESTFEST {
     private HashSet<TipoEntidade> lstTipoEntidades;
     private HashSet<TipoBilhete> lstTipoBilhetes;
     private HashSet<Artista> lstArtistas;
-    private List<PedidoConvite> lstPedidosConvite;
     private ArrayList<Convite> lstConvite;
     private List<Programa> lstPrograma;
 
@@ -40,10 +39,9 @@ public class GESTFEST {
         this.lstTipoEntidades = new HashSet<>();
         this.lstTipoBilhetes = new HashSet<>();
         this.lstConvite = new ArrayList<>();
-        this.lstPedidosConvite = new ArrayList<>();
     }
 
-    public GESTFEST(String designacao, Date dataCriacao, int nif, int capitalSocial, PedidoConvite lstPedidosConvite, Convite lstConvite) {
+    public GESTFEST(String designacao, Date dataCriacao, int nif, int capitalSocial, Convite lstConvite) {
         this.designacao = designacao;
         this.dataCriacao = dataCriacao;
         this.nif = nif;
@@ -53,7 +51,6 @@ public class GESTFEST {
         this.lstBilhetes = new HashSet<>();
         this.lstTipoEntidades = new HashSet<>();
         this.lstTipoBilhetes = new HashSet<>();
-        this.lstPedidosConvite = new ArrayList<>();
         this.lstConvite = new ArrayList<>();
     }
 
@@ -67,7 +64,6 @@ public class GESTFEST {
         this.lstBilhetes = g.lstBilhetes;
         this.lstTipoEntidades = g.lstTipoEntidades;
         this.lstTipoBilhetes = g.lstTipoBilhetes;
-        this.lstPedidosConvite = g.lstPedidosConvite;
         this.lstConvite = g.lstConvite;
     }
 
@@ -143,40 +139,16 @@ public class GESTFEST {
         return new Entidade();
     }
 
-    public String getListaPedidosConvite() {
-        StringBuilder sb = new StringBuilder();
-        for (PedidoConvite p : this.lstPedidosConvite) {
-            sb.append(p.toString());
-        }
-        return sb.toString();
-    }
-
-    public PedidoConvite obterPedidoConvite(int cod) {
-        for (PedidoConvite p : this.lstPedidosConvite) {
-            if (p.getCodPedidoConvite() == cod) {
-                return p;
-            }
-        }
-        return new PedidoConvite();
-    }
-
     private boolean adicionaConvite(Convite convite) {
         return lstConvite.add(convite);
+    }
+    
+    public ArrayList<Convite> getListaConvites(){
+        return this.lstConvite;
     }
 
     public Artista novoArtista() {
         return new Artista();
-    }
-
-    private boolean valida(Artista Artista) {
-        boolean bRet = true;
-        for (Artista a : this.lstArtistas) {
-            if (Artista.equals(a)) {
-
-                bRet = false;
-            }
-        }
-        return bRet;
     }
 
     public boolean registaArtista(Artista a) {
@@ -188,9 +160,9 @@ public class GESTFEST {
         return false;
     }
 
-    private boolean validaArtista(Artista a) {
-        for (Artista artista : this.lstArtistas) {
-            if (artista.equals(a)) {
+    private boolean validaArtista(Artista Artista) {
+        for (Artista a : this.lstArtistas) {
+            if (Artista.equals(a)) {
                 return false;
             }
         }
