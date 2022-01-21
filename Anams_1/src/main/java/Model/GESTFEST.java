@@ -23,6 +23,7 @@ public class GESTFEST {
     private HashSet<Artista> lstArtistas;
     private ArrayList<Convite> lstConvite;
     private List<Programa> lstPrograma;
+    private List<Compra> lstCompra;
 
     private static final String STR_DEFAULT = "";
     private static final int INT_DEFAULT = 0;
@@ -231,5 +232,19 @@ public class GESTFEST {
 
     public Object getRegistoNotificacoes() {
         throw new UnsupportedOperationException("Not supported yet."); //To change body of generated methods, choose Tools | Templates.
+    }
+
+    public ArrayList<Compra> procurarVendas(Festival festival) {
+        ArrayList<Compra> vendas = new ArrayList<Compra>();
+        for(Compra c : lstCompra){
+            if(c.getFestival().equals(festival)){
+                vendas.add(c);
+            }
+        }
+        return vendas;
+    }
+
+    public void registarCompra(Compra compra) {
+        lstCompra.add(compra);
     }
 }

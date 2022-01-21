@@ -6,6 +6,7 @@ import java.time.LocalDate;
  *
  * @author grupo9
  */
+
 public class Compra {
 
     private int referencia;

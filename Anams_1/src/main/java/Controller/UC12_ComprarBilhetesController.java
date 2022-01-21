@@ -84,4 +84,8 @@ public class UC12_ComprarBilhetesController {
     public String getCompraAsString(){
         return this.compra.toString();
     }
+    
+    public void guardarCompras(){
+        this.gestfest.registarCompra(compra);
+    }
 }

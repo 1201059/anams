@@ -1,7 +1,9 @@
 package Controller;
 
+import Model.Compra;
 import Model.Festival;
 import Model.GESTFEST;
+import java.util.ArrayList;
 
 /**
  *
@@ -16,5 +18,11 @@ public class UC13_ConsultarVendasBilhetesController {
         this.gestfest = gestfest;
     }
 
+    public void consultarFestival(String festival){
+        this.festival = this.gestfest.procuraFestival(festival);
+    }
     
+    public ArrayList<Compra> procurarVendas(){
+        return this.gestfest.procurarVendas(this.festival);
+    }
 }
