@@ -4,7 +4,7 @@ import Model.Atuacao;
 import Model.Artista;
 import Model.Festival;
 import Model.GESTFEST;
-import Model.Programa;
+import Model.ProgramaFestival;
 import java.util.HashSet;
 
 /**
@@ -15,7 +15,7 @@ import java.util.HashSet;
 public class UC09_DefinirProgramacaoFestivalController {
     private GESTFEST gestfest;
     private Festival festival;
-    private Programa programa;
+    private ProgramaFestival programa;
 
     public UC09_DefinirProgramacaoFestivalController(GESTFEST gestfest){
         this.gestfest = gestfest;
@@ -23,7 +23,7 @@ public class UC09_DefinirProgramacaoFestivalController {
 
     public void consultarFestival(String fest){
         festival = gestfest.procuraFestival(fest);
-        programa = new Programa();
+        programa = new ProgramaFestival();
         programa.setFestival(festival);
         programa.setDatainicio(festival.getDatainicio());
         programa.setDatafim(festival.getDatafim());

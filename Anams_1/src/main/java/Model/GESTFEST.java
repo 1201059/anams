@@ -22,7 +22,7 @@ public class GESTFEST {
     private HashSet<TipoBilhete> lstTipoBilhetes;
     private HashSet<Artista> lstArtistas;
     private ArrayList<Convite> lstConvite;
-    private List<Programa> lstPrograma;
+    private List<ProgramaFestival> lstPrograma;
     private List<Compra> lstCompra;
 
     private static final String STR_DEFAULT = "";
@@ -204,17 +204,17 @@ public class GESTFEST {
         return this.lstConvite.add(c);
     }
 
-    public void registarPrograma(Programa programa){
+    public void registarPrograma(ProgramaFestival programa){
         lstPrograma.add(programa);
     }
 
-    public Programa procurarPrograma(Festival festival){
-        for(Programa p : lstPrograma){
+    public ProgramaFestival procurarPrograma(Festival festival){
+        for(ProgramaFestival p : lstPrograma){
             if(p.getFestival().equals(festival)){
                 return p;
             }
         }
-        return new Programa();
+        return new ProgramaFestival();
     }
 
     public ArrayList<Convite> getListaConvite() {

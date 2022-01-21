@@ -2,7 +2,7 @@ package Controller;
 
 import Model.Festival;
 import Model.GESTFEST;
-import Model.Programa;
+import Model.ProgramaFestival;
 
 /**
  *
@@ -25,7 +25,7 @@ public class UC10_ConsultarProgramacaoFestivalController {
         return procurarPrograma().toString();
     }
 
-    private Programa procurarPrograma(){
+    private ProgramaFestival procurarPrograma(){
         return gestfest.procurarPrograma(festival);
     }
 }
