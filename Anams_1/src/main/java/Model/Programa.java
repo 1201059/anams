@@ -1,13 +1,14 @@
 package Model;
 
+import java.time.LocalDate;
 import java.util.Date;
 import java.util.HashSet;
 
 public class Programa {
     private int referencia;
     private Festival festival;
-    private Date datainicio;
-    private Date datafim;
+    private LocalDate datainicio;
+    private LocalDate datafim;
     private HashSet<Atuacao> atuacao;
 
     public Programa(){
@@ -18,12 +19,12 @@ public class Programa {
         this.atuacao=atuacao;
     }
     
-    public Programa(int referencia, Festival festival, Date datainicio, Date datafim, HashSet<Atuacao> atuacao){
-        this.referencia=referencia;
-        this.festival=festival;
-        this.datainicio=datainicio;
-        this.datafim=datafim;
-        this.atuacao=atuacao;
+    public Programa(int referencia, Festival festival, LocalDate datainicio, LocalDate datafim, HashSet<Atuacao> atuacao){
+        this.referencia = referencia;
+        this.festival = festival;
+        this.datainicio = datainicio;
+        this.datafim = datafim;
+        this.atuacao = atuacao;
     }
 
     public int getReferencia() {
@@ -42,19 +43,19 @@ public class Programa {
         this.festival = festival;
     }
 
-    public Date getDatainicio() {
+    public LocalDate getDatainicio() {
         return datainicio;
     }
 
-    public void setDatainicio(Date datainicio) {
+    public void setDatainicio(LocalDate datainicio) {
         this.datainicio = datainicio;
     }
 
-    public Date getDatafim() {
+    public LocalDate getDatafim() {
         return datafim;
     }
 
-    public void setDatafim(Date datafim) {
+    public void setDatafim(LocalDate datafim) {
         this.datafim = datafim;
     }
 

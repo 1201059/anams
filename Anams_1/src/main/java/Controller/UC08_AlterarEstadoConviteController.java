@@ -1,6 +1,7 @@
 package Controller;
 
 import Model.Convite;
+import Model.Notificacao;
 import Model.Convite.Estado;
 import Model.GESTFEST;
 import java.util.ArrayList;

@@ -7,7 +7,7 @@ import java.util.Objects;
  * @author grupo9
  */
 
-class Notificacao {
+public class Notificacao {
     /**
      * O email do destinatario da notificação
      */

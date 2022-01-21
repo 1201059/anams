@@ -4,6 +4,9 @@ import Controller.UC05_RegistoFestivalController;
 import Model.Entidade;
 import Model.GESTFEST;
 import Utilitarios.Utils;
+import java.time.Instant;
+import java.time.LocalDate;
+import java.time.ZoneId;
 import java.util.Date;
 import java.util.HashSet;
 
@@ -13,7 +16,6 @@ import java.util.HashSet;
  */
 
 public class UC05_RegistoFestivalUI {
-
     private GESTFEST gestfest;
     private UC05_RegistoFestivalController controller;
 
@@ -56,12 +58,18 @@ public class UC05_RegistoFestivalUI {
         return Utils.readLineFromConsole("Insira a localização do Festival");
     }
 
-    private Date introduzDataInicio() {
-        return Utils.readDateFromConsole("Insira a data de início do Festival");
+    private LocalDate introduzDataInicio() {
+        Date data = Utils.readDateFromConsole("Insira a data de início do Festival");
+        return Instant.ofEpochMilli(data.getTime())
+                        .atZone(ZoneId.systemDefault())
+                        .toLocalDate();
     }
 
-    private Date introduzDataFim() {
-        return Utils.readDateFromConsole("Insira a data de início do Festival");
+    private LocalDate introduzDataFim() {
+        Date data = Utils.readDateFromConsole("Insira a data de fim do Festival");
+        return Instant.ofEpochMilli(data.getTime())
+                        .atZone(ZoneId.systemDefault())
+                        .toLocalDate();
     }
 
     private String introduzRecinto() {
@@ -82,5 +90,6 @@ public class UC05_RegistoFestivalUI {
     }
 
     private void apresentaDados() {
+        System.out.println(controller.getFestivalAsString());
     }
 }

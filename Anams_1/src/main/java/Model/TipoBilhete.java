@@ -6,18 +6,28 @@ package Model;
  */
 
 public class TipoBilhete {
+    private int referencia;
     private String TipoBilhete;
     
+    private static int contador = 0; 
+    
     public TipoBilhete(){
-        this.TipoBilhete=TipoBilhete;
+        this.referencia = ++contador;
+        this.TipoBilhete = TipoBilhete;
     }
 
     public TipoBilhete(String TipoBilhete){
-        this.TipoBilhete=TipoBilhete;
+        this.referencia = ++contador;
+        this.TipoBilhete = TipoBilhete;
     }
 
     public TipoBilhete(TipoBilhete tp){
-        this.TipoBilhete=tp.TipoBilhete;
+        this.referencia = tp.referencia;
+        this.TipoBilhete = tp.TipoBilhete;
+    }
+    
+    public int getReferencia(){
+        return this.referencia;
     }
 
     public String getTipoBilhete() {

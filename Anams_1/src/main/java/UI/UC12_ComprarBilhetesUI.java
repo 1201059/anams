@@ -4,16 +4,16 @@ import Controller.UC12_ComprarBilhetesController;
 import Model.Compra;
 import Model.GESTFEST;
 import java.util.ArrayList;
-import model.GESTFEST;
-import model.TipoBilhete;
-import utilitarios.Utils;
+import Model.GESTFEST;
+import Model.TipoBilhete;
+import Utilitarios.Utils;
 
 /**
  *
  * @author grupo9
  */
-public class UC12_ComprarBilhetesUI {
 
+public class UC12_ComprarBilhetesUI {
     private GESTFEST gestfest;
     private UC12_ComprarBilhetesController controller;
     private Compra compra;
@@ -74,4 +74,7 @@ public class UC12_ComprarBilhetesUI {
         return a;
     }
 
+    private void apresentaDados(){
+        System.out.println(controller.getCompraAsString());
+    }
 }

@@ -16,7 +16,7 @@ public class Convite implements Comparable<Convite> {
     private String email;
     private Festival festival;
     private Date dataConvite;
-    private Date datalimite;
+    private Date dataLimite;
     private Estado estado;
 
     private static int contador = 0;
@@ -28,7 +28,7 @@ public class Convite implements Comparable<Convite> {
         this.email= STRING_DEFAULT;
         this.festival = new Festival();
         this.dataConvite = new Date();
-        this.datalimite = new Date ();
+        this.dataLimite = new Date ();
         this.estado = Estado.sem_resposta;
     }
 
@@ -38,6 +38,7 @@ public class Convite implements Comparable<Convite> {
         this.email= convite.email;
         this.festival = convite.festival;
         this.dataConvite = convite.dataConvite;
+        this.dataLimite = convite.dataLimite;
         this.estado = convite.estado;
     }
 
@@ -62,7 +63,7 @@ public class Convite implements Comparable<Convite> {
     }
 
     public Date getDatalimite() {
-        return datalimite;
+        return dataLimite;
     }
 
     public Estado getEstado() {
@@ -98,17 +99,24 @@ public class Convite implements Comparable<Convite> {
     }
 
     public void setDatalimite(Date datalimite) {
-        this.datalimite = datalimite;
+        this.dataLimite = datalimite;
     }
 
     public void setEstado(Estado estado) {
         this.estado = estado;
     }
 
-    public static void setContador(int contador) {
-        Convite.contador = contador;
+    public boolean valida(Convite c){
+        if(this.artista.equals(c.artista)
+                && this.email.equalsIgnoreCase(c.email)
+                && this.festival.equals(c.festival)
+                && this.dataConvite.equals(c.dataConvite)
+                && this.dataLimite.equals(c.dataLimite)
+                && this.estado.equals(c.estado)){
+            return false;
+        }
+        return true;
     }
-
 
     @Override
     public boolean equals(Object outroObjeto) {

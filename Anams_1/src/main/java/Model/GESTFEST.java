@@ -109,7 +109,6 @@ public class GESTFEST {
 
     public void registarEntidade(Entidade entidade) {
         lstEntidades.add(entidade);
-
     }
 
     public Festival procuraFestival(String festival) {
@@ -142,7 +141,7 @@ public class GESTFEST {
     private boolean adicionaConvite(Convite convite) {
         return lstConvite.add(convite);
     }
-    
+
     public ArrayList<Convite> getListaConvites(){
         return this.lstConvite;
     }
@@ -191,7 +190,7 @@ public class GESTFEST {
         return false;
     }
 
-    private boolean validaConvite(Convite c) {
+    public boolean validaConvite(Convite c) {
         for (Convite convite : this.lstConvite) {
             if (convite.equals(c)) {
                 return false;
@@ -203,11 +202,11 @@ public class GESTFEST {
     private boolean addConvite(Convite c) {
         return this.lstConvite.add(c);
     }
-    
+
     public void registarPrograma(Programa programa){
         lstPrograma.add(programa);
     }
-    
+
     public Programa procurarPrograma(Festival festival){
         for(Programa p : lstPrograma){
             if(p.getFestival().equals(festival)){
@@ -228,5 +227,9 @@ public class GESTFEST {
             }
         }
         return new Artista();
+    }
+
+    public Object getRegistoNotificacoes() {
+        throw new UnsupportedOperationException("Not supported yet."); //To change body of generated methods, choose Tools | Templates.
     }
 }

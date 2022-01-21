@@ -3,7 +3,7 @@ package Controller;
 import Model.Entidade;
 import Model.Festival;
 import Model.GESTFEST;
-import java.util.Date;
+import java.time.LocalDate;
 import java.util.HashSet;
 
 /**
@@ -16,7 +16,7 @@ public class UC05_RegistoFestivalController {
     private Festival festival;
 
     public UC05_RegistoFestivalController(GESTFEST gestfest){
-        gestfest=gestfest;
+        gestfest = gestfest;
     }
 
     public void novoFestival(){
@@ -35,11 +35,11 @@ public class UC05_RegistoFestivalController {
         this.festival.setLocalizacao(localizacao);
     }
 
-    public void setDataFim (Date datafim){
+    public void setDataFim (LocalDate datafim){
         this.festival.setDatafim(datafim);
     }
 
-    public void setDataInicio (Date datainicio){
+    public void setDataInicio (LocalDate datainicio){
         this.festival.setDatainicio(datainicio);
     }
 

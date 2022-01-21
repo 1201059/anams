@@ -214,6 +214,7 @@ public class Artista {
     /**
      * Valida o cliente.
      *
+     * @param a
      * @return True caso o cliente seja valido
      */
     public boolean valida(Artista a) {
