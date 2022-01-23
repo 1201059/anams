@@ -135,6 +135,14 @@ public class Festival {
     public void setEntidades(HashSet<Entidade> entidades) {
         this.entidades = entidades;
     }
+    
+    public boolean valida() {
+        boolean validacao = true;
+        if (this.referencia <= 0 || this.designacao.length() <= 0 || this.edicao.length() <= 0 || this.localizacao.length() || this.datainicio.equals(LocalDate.now()) || this.datafim.equals(LocalDate.now()) || this.recinto.length()<=0 || this.qntdPalcos.length() || this.lotacaoPalcos.length()) {
+            return false;
+        }
+        return validacao;
+    }
 
     public boolean equals(Object obj) {
         if (this == obj) { return true; }

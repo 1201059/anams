@@ -211,12 +211,19 @@ public class Artista {
         this.endereco = endereco;
     }
 
+    public boolean valida() {
+        boolean validacao = true;
+        if (this.nomeComp.length() <= 0 || this.email.length() <= 0 || this.nif.length() <= 0 || this.telemovel.length() <= 0 || this.dataNasc..equals(Date)|| this.endereco.length() <=0){
+            validacao = false;
+        }
+        return validacao;
+    }
     /**
      * Valida o cliente.
      *
      * @param a
      * @return True caso o cliente seja valido
-     */
+     
     public boolean valida(Artista a) {
         boolean condicao = true;
         if (this.nomeComp.equalsIgnoreCase(a.nomeComp)

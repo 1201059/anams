@@ -96,7 +96,11 @@ public class Recinto {
     }
 
     public boolean valida() {
-        return true;
+        boolean validacao = true;
+        if (this.codigoRecinto <= 0 || this.nomeRecinto.length() <= 0 || this.localizacaoRecinto.valida() == false || this.nroPalcos <= 0 || this.lotacaoRecinto <= 0) {
+            return false;
+        }
+        return validacao;
     }
 
     public boolean equals(Object obj) {

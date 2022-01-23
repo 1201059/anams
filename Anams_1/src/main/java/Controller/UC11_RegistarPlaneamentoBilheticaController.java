@@ -42,7 +42,7 @@ public class UC11_RegistarPlaneamentoBilheticaController {
     }
 
     public List<TipoBilhete> setTipoBilhete(){
-        
+        this.gestfest.getLstTipoBilhetes() ;
     }
 
     public void newPlano(){
@@ -54,7 +54,7 @@ public class UC11_RegistarPlaneamentoBilheticaController {
     }
 
     public int getLotacao(LocalDate data){
-        
+         
     }
 
     public void setPlanoDiario(TipoBilhete tp, int numBilhetes){

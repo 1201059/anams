@@ -247,4 +247,15 @@ public class GESTFEST {
     public void registarCompra(Compra compra) {
         lstCompra.add(compra);
     }
+
+     public Convite obterConvite(int codigo) {
+        for (Convite c : lstConvite) {
+            if (c.getReferencia() == codigo) {
+                return c;
+            }
+        }
+        return null;
+    }
+    
+    
 }

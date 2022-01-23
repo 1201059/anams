@@ -1,7 +1,8 @@
 package Model;
 
+import java.time.LocalDate;
+import java.time.LocalDateTime;
 import java.util.ArrayList;
-import java.util.Date;
 import java.util.List;
 
 /**
@@ -15,8 +16,8 @@ public class Convite implements Comparable<Convite> {
     private Artista artista;
     private String email;
     private Festival festival;
-    private Date dataConvite;
-    private Date dataLimite;
+    private LocalDate dataConvite;
+    private LocalDate dataLimite;
     private Estado estado;
 
     private static int contador = 0;
@@ -27,8 +28,8 @@ public class Convite implements Comparable<Convite> {
         this.artista = new Artista();
         this.email= STRING_DEFAULT;
         this.festival = new Festival();
-        this.dataConvite = new Date();
-        this.dataLimite = new Date ();
+        this.dataConvite = LocalDate.now();
+        this.dataLimite = LocalDate.now();
         this.estado = Estado.sem_resposta;
     }
 
@@ -58,11 +59,11 @@ public class Convite implements Comparable<Convite> {
         return festival;
     }
 
-    public Date getDataConvite() {
+    public LocalDate getDataConvite() {
         return dataConvite;
     }
 
-    public Date getDatalimite() {
+    public LocalDate getDatalimite() {
         return dataLimite;
     }
 
@@ -94,11 +95,11 @@ public class Convite implements Comparable<Convite> {
         this.festival = festival;
     }
 
-    public void setDataConvite(Date dataConvite) {
+    public void setDataConvite(LocalDate dataConvite) {
         this.dataConvite = dataConvite;
     }
 
-    public void setDatalimite(Date datalimite) {
+    public void setDatalimite(LocalDate datalimite) {
         this.dataLimite = datalimite;
     }
 
@@ -116,6 +117,13 @@ public class Convite implements Comparable<Convite> {
             return false;
         }
         return true;
+    }
+    public boolean valida() {
+        boolean validacao = true;
+        if (this.artista.valida() == false || this.email.length() <= 0 || this.festival.valida() <= 0 || this.dataConvite.equals(LocalDate.now()) || this.dataLimite.equals(LocalDate.now()))  {
+            return false;
+        }
+        return validacao;
     }
 
     @Override
@@ -146,6 +154,6 @@ public class Convite implements Comparable<Convite> {
 
     @Override
     public int compareTo(Convite convite) {
-        if(this.getDataConvite().equals(convite.getDataConvite())){ return 0; }else if(this.getDataConvite().before(convite.getDataConvite())){return -1;}else{return 1;}
+        if(this.getDataConvite().equals(convite.getDataConvite())){ return 0; }else if(this.getDataConvite().isBefore(convite.getDataConvite())){return -1;}else{return 1;}
     }
 }
